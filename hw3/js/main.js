@@ -1,1 +1,4 @@
-
+function play()
+{
+$("#video").play();
+}
