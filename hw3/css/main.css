@@ -10,3 +10,7 @@
 	height:340px;
 	overflow: auto;
 }
+
+video {
+	width:60%;
+}
