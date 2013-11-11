@@ -5,18 +5,18 @@
    ========================================================================== */
 
 
-.vrl {
-	border-left: 1px solid #333;
+.vr {
+	border-right: 1px solid #333;
 }
 
 .gesture {
-	height: 1em;
+	width: 2em;
 }
 
-
-
-
-
+.scrollable {
+	height:340px;
+	overflow: auto;
+}
 
 
 
