@@ -5,20 +5,27 @@
    ========================================================================== */
 
 
-.vr {
-	border-right: 1px solid #333;
-}
+   .vr {
+   	border-right: 1px solid #333;
+   }
 
-.gesture {
-	width: 2em;
-}
+   .gesture {
+   	width: 2em;
+   }
 
-.scrollable {
-	height:340px;
-	overflow: auto;
-}
+   .scrollable {
+   	height:340px;
+   	overflow: auto;
+   }
+/*
+   table td {
+   	border-right: 1px solid #000;
+   }
 
+   table td:nth-child(odd) {
+   	border-right: none;
+   }
 
-
-
-
+   table td:last-child {
+   	border-right: none;
+   }*/
