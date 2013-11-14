@@ -22,175 +22,182 @@
   <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 </head>
 <body>
-        <!--[if lt IE 7]>
-            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-            <![endif]-->
+  <!--[if lt IE 7]>
+  <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+  <![endif]-->
 
-            <!-- Main jumbotron for a primary marketing message or call to action -->
-            <!-- Logo -->
-            <div class="container well">
-              <img src="img/logo/logo_fly.png" class="pull-left">
-              <img src="img/logo/logo_name.png" class="pull-right">
-            </div>  
+  <!-- Logo -->
+  <div class="container well">
+    <img src="img/logo/logo_fly.png" class="pull-left">
+    <img src="img/logo/logo_name.png" class="pull-right">
+  </div>  
 
-            <div class="container">
+  <div class="container">
 
-              <div class="container text-center">
-                <video controls src="img/mechanical_principles-1930.mp4"/>
-              </div>
-              
-              <hr>
-              <div class="container well">
-                <h3>
-                  This player is operated by the following gestures:
-                </h3>
-                <div class="row">
-                  <div class="col-md-4">
-                    <table class="table table-hover">
-                      <tr>
-                        <td>
-                          <h4 class="pull-left">Play:</h4>
-                        </td>
-                        <td>
-                          <img class="gesture" src="img/gesture/triangle.png"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <h4 class="pull-left">Pause:</h4>
-                        </td>
-                        <td>
-                          <img class="gesture" src="img/gesture/bars-vertical.png"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <h4 class="pull-left">Seek Forward:</h4>
-                        </td>
-                        <td>
-                          <img class="gesture" src="img/gesture/angle-right.png"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <h4 class="pull-left">Seek Reverse:</h4>
-                        </td>
-                        <td>
-                          <img class="gesture" src="img/gesture/angle-left.png"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <h4 class="pull-left">Increase Playback Speed:</h4>
-                        </td>
-                        <td>
-                          <img class="gesture" src="img/gesture/angles-right.png"/>
-                        </td>
-                      </tr>
-                    </table>
-                  </div>
-                  <div class="col-md-4">
-                    <table class="table table-hover">
-                      <tr>
-                        <td>
-                          <h4 class="pull-left">Decrease Playback Speed:</h4>
-                        </td>
-                        <td>
-                          <img class="gesture" src="img/gesture/angles-left.png"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <h4 class="pull-left">Increase Volume:</h4>
-                        </td>
-                        <td>
-                          <img class="gesture" src="img/gesture/plus.png"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <h4 class="pull-left">Decrease Volume:</h4>
-                        </td>
-                        <td>
-                          <img class="gesture" src="img/gesture/minus.png"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <h4 class="pull-left">Mute:</h4>
-                        </td>
-                        <td>
-                          <img class="gesture" src="img/gesture/circle.png"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <h4 class="pull-left">Expand:</h4>
-                        </td>
-                        <td>
-                          <img class="gesture" src="img/gesture/bolt.png"/>
-                        </td>
-                      </tr>
-                    </table>
-                  </div>
-                  <div class="col-md-4">
-                    <table class="table table-hover">
-                      <tr>
-                        <td>
-                          <h4 class="pull-left">Increase Width:</h4>
-                        </td>
-                        <td>
-                          <img class="gesture" src="img/gesture/arrow-right.png"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <h4 class="pull-left">Decrease Width:</h4>
-                        </td>
-                        <td>
-                          <img class="gesture" src="img/gesture/arrow-left.png"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <h4 class="pull-left">Increase Height:</h4>
-                        </td>
-                        <td>
-                          <img class="gesture" src="img/gesture/arrow-up.png"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <h4 class="pull-left">Decrease Height:</h4>
-                        </td>
-                        <td>
-                          <img class="gesture" src="img/gesture/arrow-down.png"/>
-                        </td>
-                      </tr>
-                    </table>
-                  </div>
-                </div>
-              </div>
+    <div class="container text-center">
+      <video controls id="video" src="img/mechanical_principles-1930.mp4"/>
+    </div>
+    
+    <button id="play">play</button>
+    <button id="pause">pause</button>
+    
+    <hr>
+    
+    <div class="container well">
+      <h3>
+        This player is operated by the following gestures:
+      </h3>
+      <div class="row">
+        <div class="col-md-4">
+          <table class="table table-hover">
+            <tr>
+              <td>
+                <h5 class="pull-left">Play:</h5>
+              </td>
+              <td>
+                <img class="gesture" src="img/gesture/triangle.png"/>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h5 class="pull-left">Pause:</h5>
+              </td>
+              <td>
+                <img class="gesture" src="img/gesture/bars.png"/>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h5 class="pull-left">Seek Forward:</h5>
+              </td>
+              <td>
+                <img class="gesture" src="img/gesture/angle-right.png"/>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h5 class="pull-left">Seek Reverse:</h5>
+              </td>
+              <td>
+                <img class="gesture" src="img/gesture/angle-left.png"/>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h5 class="pull-left">Increase Playback Speed:</h5>
+              </td>
+              <td>
+                <img class="gesture" src="img/gesture/angles-right.png"/>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="col-md-4">
+          <table class="table table-hover">
+            <tr>
+              <td>
+                <h5 class="pull-left">Decrease Playback Speed:</h5>
+              </td>
+              <td>
+                <img class="gesture" src="img/gesture/angles-left.png"/>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h5 class="pull-left">Increase Volume:</h5>
+              </td>
+              <td>
+                <img class="gesture" src="img/gesture/plus.png"/>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h5 class="pull-left">Decrease Volume:</h5>
+              </td>
+              <td>
+                <img class="gesture" src="img/gesture/minus.png"/>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h5 class="pull-left">Mute:</h5>
+              </td>
+              <td>
+                <img class="gesture" src="img/gesture/circle.png"/>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h5 class="pull-left">Expand:</h5>
+              </td>
+              <td>
+                <img class="gesture" src="img/gesture/bolt.png"/>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="col-md-4">
+          <table class="table table-hover">
+            <tr>
+              <td>
+                <h5 class="pull-left">Increase Width:</h5>
+              </td>
+              <td>
+                <img class="gesture" src="img/gesture/arrow-right.png"/>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h5 class="pull-left">Decrease Width:</h5>
+              </td>
+              <td>
+                <img class="gesture" src="img/gesture/arrow-left.png"/>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h5 class="pull-left">Increase Height:</h5>
+              </td>
+              <td>
+                <img class="gesture" src="img/gesture/arrow-up.png"/>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h5 class="pull-left">Decrease Height:</h5>
+              </td>
+              <td>
+                <img class="gesture" src="img/gesture/arrow-down.png"/>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
 
-              <hr>
+    <canvas id="myCanvas" onmousedown="mouseDownEvent(event.clientX, event.clientY, event.button)" onmousemove="mouseMoveEvent(event.clientX, event.clientY, event.button)" onmouseup="mouseUpEvent(event.clientX, event.clientY, event.button)" oncontextmenu="return false;"></canvas>
 
-              <footer>
-                <p class="text-muted text-center credit">&copy; 2013 William Falk-Wallace | <a href="readme.html">README</a></p>
-              </footer>
-            </div> <!-- /container -->        
-            
-            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-            <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+    <canvas id="myCanvas" width="420" height="400" style="background-color:#dddddd" onmousedown="mouseDownEvent(event.clientX, event.clientY, event.button)" onmousemove="mouseMoveEvent(event.clientX, event.clientY, event.button)" onmouseup="mouseUpEvent(event.clientX, event.clientY, event.button)" oncontextmenu="return false;"></canvas>
 
-            <script src="js/vendor/bootstrap.min.js"></script>
-            <script src="js/pdollar.js"></script>
-            <script src="js/main.js"></script>
+    <hr>
 
-            <script>
-            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-              g.src='//www.google-analytics.com/ga.js';
-              s.parentNode.insertBefore(g,s)}(document,'script'));
-            </script>
-          </body>
-          </html>
+    <footer>
+      <p class="text-muted text-center credit">&copy; 2013 William Falk-Wallace | <a href="readme.html">README</a></p>
+    </footer>
+  </div> <!-- /container -->        
+  
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+
+  <script src="js/vendor/bootstrap.min.js"></script>
+  <script src="js/pdollar.js"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+  var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src='//www.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
+</body>
+</html>
