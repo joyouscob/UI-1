@@ -295,7 +295,7 @@ $(function () {
 	}
 	function tall() 
 	{
-		// _v.videoHeight=500px;
+		// _v.videoHeight=500;
 	}
 	function short() 
 	{
