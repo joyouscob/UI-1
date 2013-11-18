@@ -21,4 +21,4 @@ This is my submission for Homework 3 and can be run by opening the file `index.h
 	- (excludes well and footer)
 - gestures are skeuomorphs and intuitive
 - lightning bolt full screen?
-- instruction well contradicts gesture canvas style? perhaps
+- instruction well contradicts gesture canvas style? perhaps 
