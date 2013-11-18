@@ -18,7 +18,6 @@ $(function () {
 	_isDown = false;
 	
 	_v.load();
-	console.dir(_v);
 
 	
 	$("#myCanvas").mousedown(function(event) {
@@ -287,7 +286,7 @@ $(function () {
 	}
 	function wide() 
 	{
-		// _v.width+=50px;
+		// _v.style.width=50px;
 	}
 	function thin() 
 	{
