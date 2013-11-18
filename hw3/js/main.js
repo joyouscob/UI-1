@@ -1,12 +1,11 @@
 $(function () {
 
-	$('video').get(0).load();
-
-	var _isDown, _points, _strokeID, _r, _g, _rc; // global variables
+	var _isDown, _points, _strokeID, _r, _g, _rc, _v; // global variables
 
 	_points = new Array(); // point array for current stroke
 	_strokeID = 0;
 	_r = new PDollarRecognizer();
+	_v = $('video').get(0);
 
 	var canvas = document.getElementById('myCanvas');
 	_g = canvas.getContext('2d');
@@ -17,6 +16,10 @@ $(function () {
 	_g.fillRect(0, 0, _rc.width, 20);
 
 	_isDown = false;
+	
+	_v.load();
+	console.dir(_v);
+
 	
 	$("#myCanvas").mousedown(function(event) {
 		// console.dir(event);
@@ -200,6 +203,9 @@ $(function () {
 			case "triangle":
 			play();
 			break;
+			case "bars":
+			pause();
+			break;
 			case "angle-left":
 			rw();
 			break;
@@ -222,7 +228,7 @@ $(function () {
 			mute();
 			break;
 			case "bolt":
-			pause();
+			toggle();
 			break;
 			case "arrow-up":
 			tall();
@@ -239,61 +245,61 @@ $(function () {
 		};
 	}
 	
+	function toggle() 
+	{
+		!(_v.currentTime == 0 || _v.paused || _v.ended) ? _v.pause() : _v.play();
+	}
 	function play() 
 	{
-		$('video').get(0).play();
+		_v.play();
 	}
 	function pause() 
 	{
-		$('video').get(0).pause();
+		_v.pause();
 	}
 	function ff() 
 	{
-		$('video').get(0).currentTime+=10;
+		_v.currentTime+=10;
 	}
 	function rw() 
 	{
-		$('video').get(0).currentTime-=10;
+		_v.currentTime-=10;
 	}
 	function accel() 
 	{
-		$('video').get(0).playbackRate++;
+		_v.playbackRate++;
 	}
 	function decel() 
 	{
-		$('video').get(0).playbackRate--;
+		_v.playbackRate--;
 	}
 	function incr() 
 	{
-		$('video').get(0).volume+=0.1;
+		_v.volume+=0.1;
 	}
 	function decr() 
 	{
-		$('video').get(0).volume-=0.1;
+		_v.volume-=0.1;
 	}
 	function mute() 
 	{
-		($('video').get(0).muted == true) ? $('video').get(0).muted=false : $('video').get(0).muted=true;
+		(_v.muted == true) ? _v.muted=false : _v.muted=true;
 	}
-	// function expand() 
-	// {
-	// 	();
-	// }
 	function wide() 
 	{
-		$('video').get(0).width+=50px;
+		// _v.width+=50px;
 	}
 	function thin() 
 	{
-		$('video').get(0).width-=50px;
+		// _v.width-=50px;
 	}
 	function tall() 
 	{
-		$('video').get(0).height+=50px;
+		// _v.videoHeight=500px;
 	}
 	function short() 
 	{
-		$('video').get(0).height-=50px;
+		// _v.height-=50px;
 	}
 	
 	
