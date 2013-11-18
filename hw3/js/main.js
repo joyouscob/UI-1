@@ -36,7 +36,6 @@ $(function () {
 
 	function getCanvasRect(canvas)
 	{
-		console.dir(canvas);
 		var w = canvas.width;
 		var h = canvas.height;
 
@@ -201,9 +200,6 @@ $(function () {
 			case "triangle":
 			play();
 			break;
-			case "bars":
-			pause();
-			break;
 			case "angle-left":
 			rw();
 			break;
@@ -225,9 +221,9 @@ $(function () {
 			case "circle":
 			mute();
 			break;
-			// case "bolt":
-			// expand();
-			// break;
+			case "bolt":
+			pause();
+			break;
 			case "arrow-up":
 			tall();
 			break;
@@ -277,8 +273,7 @@ $(function () {
 	}
 	function mute() 
 	{
-		$('video').get(0).muted=true;
-		$('video').get(0).muted=false;
+		($('video').get(0).muted == true) ? $('video').get(0).muted=false : $('video').get(0).muted=true;
 	}
 	// function expand() 
 	// {
@@ -286,19 +281,19 @@ $(function () {
 	// }
 	function wide() 
 	{
-		();
+		$('video').get(0).width+=50px;
 	}
 	function thin() 
 	{
-		();
+		$('video').get(0).width-=50px;
 	}
 	function tall() 
 	{
-		();
+		$('video').get(0).height+=50px;
 	}
 	function short() 
 	{
-		();
+		$('video').get(0).height-=50px;
 	}
 	
 	
