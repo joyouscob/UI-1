@@ -33,3 +33,32 @@ canvas {
 	margin:0 25%;
 	padding:auto;
 }
+
+#howto-cursor {
+	position:relative;
+	width:10px;
+	left:50%;
+
+	-webkit-animation: up 3s ease infinite;
+	-webkit-animation: down 3s ease infinite;
+	-webkit-animation: up 3s ease infinite;
+}
+
+@-webkit-keyframes up {
+	50% { -webkit-transform: translate(50px, -100px); }
+}
+
+@-webkit-keyframes down {
+	50% { -webkit-transform: translate(0px, 50px); }
+}
+
+
+
+
+
+
+
+
+
+
+
