@@ -34,7 +34,7 @@
   <div class="container">
     <!-- Video -->
     <div class="container text-center">
-      <video controls id="video" src="img/mechanical_principles-1930.mp4"/>
+      <video id="video" src="img/mechanical_principles-1930.mp4"/>
     </div>
     <!-- Canvas -->
     <canvas id="myCanvas" width="420" height="400" oncontextmenu="return false;">
@@ -59,134 +59,145 @@
           
           <div class="container">
             <div class="container well">
-              <img src="img/howto.jpg" id="howto-screen">
-              <img src="img/cursor.png" id="howto-cursor">
-            </div>
-          </div>
-          
-          <div class="container">
-            <div class="row row-fluid">
-              <div class="col-md-6">
-                <table class="table table-hover">
-                  <tr>
-                    <td>
-                      <h5 class="pull-left">Play/Pause:</h5>
-                    </td>
-                    <td>
-                      <img class="gesture" src="img/gesture/bolt.png"/>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <h5 class="pull-left">Increase Volume:</h5>
-                    </td>
-                    <td>
-                      <img class="gesture" src="img/gesture/plus.png"/>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <h5 class="pull-left">Decrease Volume:</h5>
-                    </td>
-                    <td>
-                      <img class="gesture" src="img/gesture/minus.png"/>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <h5 class="pull-left">Mute On/Off:</h5>
-                    </td>
-                    <td>
-                      <img class="gesture" src="img/gesture/circle.png"/>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <h5 class="pull-left">Seek Forward:</h5>
-                    </td>
-                    <td>
-                      <img class="gesture" src="img/gesture/angle-right.png"/>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <h5 class="pull-left">Seek Reverse:</h5>
-                    </td>
-                    <td>
-                      <img class="gesture" src="img/gesture/angle-left.png"/>
-                    </td>
-                  </tr>
-                </table>
+              <div class="row row-fluid">
+                <div class="col-md-6">
+                  <img src="img/cursor.png" id="howto-cursor">
+                  <img src="img/howto.jpg" id="howto-screen">
+                </div>
+                <div class="col-md-6">
+                  <p>
+                    To control the video player, simply use the left mouse button to draw the corresponding gesture anywhere on the screen (excluding the footer). When you've drawn the gesture, in as many strokes as you'd like, right-click. That's it.
+                  </p>
+                  <p>
+                    To bring up this help window, use the gesture below, or hit the H key.
+                  </p>
+                </div>
               </div>
-              <div class="col-md-6">
-                <table class="table table-hover">
-                  <tr>
-                    <td>
-                      <h5 class="pull-left">Increase Playback Speed:</h5>
-                    </td>
-                    <td>
-                      <img class="gesture" src="img/gesture/angles-right.png"/>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <h5 class="pull-left">Decrease Playback Speed:</h5>
-                    </td>
-                    <td>
-                      <img class="gesture" src="img/gesture/angles-left.png"/>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <h5 class="pull-left">Increase Width:</h5>
-                    </td>
-                    <td>
-                      <img class="gesture" src="img/gesture/arrow-right.png"/>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <h5 class="pull-left">Decrease Width:</h5>
-                    </td>
-                    <td>
-                      <img class="gesture" src="img/gesture/arrow-left.png"/>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <h5 class="pull-left">Increase Height:</h5>
-                    </td>
-                    <td>
-                      <img class="gesture" src="img/gesture/arrow-up.png"/>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <h5 class="pull-left">Decrease Height:</h5>
-                    </td>
-                    <td>
-                      <img class="gesture" src="img/gesture/arrow-down.png"/>
-                    </td>
-                  </tr>
-                </table>
-              </div><!-- /.col-md-6 -->
-            </div><!-- /.row -->
-          </div><!-- /table container -->
-        </div><!-- /.modal-body -->
-      </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-  </div><!-- /.modal -->
-  
-  
-  
-  
-  
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+            </div>
+            
+            <div class="container">
+              <div class="row row-fluid">
+                <div class="col-md-6">
+                  <table class="table table-hover">
+                    <tr>
+                      <td>
+                        <h5 class="pull-left">Play/Pause:</h5>
+                      </td>
+                      <td>
+                        <img class="gesture" src="img/gesture/bolt.png"/>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <h5 class="pull-left">Increase Volume:</h5>
+                      </td>
+                      <td>
+                        <img class="gesture" src="img/gesture/plus.png"/>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <h5 class="pull-left">Decrease Volume:</h5>
+                      </td>
+                      <td>
+                        <img class="gesture" src="img/gesture/minus.png"/>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <h5 class="pull-left">Mute On/Off:</h5>
+                      </td>
+                      <td>
+                        <img class="gesture" src="img/gesture/circle.png"/>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <h5 class="pull-left">Seek Forward:</h5>
+                      </td>
+                      <td>
+                        <img class="gesture" src="img/gesture/angle-right.png"/>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <h5 class="pull-left">Seek Reverse:</h5>
+                      </td>
+                      <td>
+                        <img class="gesture" src="img/gesture/angle-left.png"/>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="col-md-6">
+                  <table class="table table-hover">
+                    <tr>
+                      <td>
+                        <h5 class="pull-left">Increase Playback Speed:</h5>
+                      </td>
+                      <td>
+                        <img class="gesture" src="img/gesture/angles-right.png"/>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <h5 class="pull-left">Decrease Playback Speed:</h5>
+                      </td>
+                      <td>
+                        <img class="gesture" src="img/gesture/angles-left.png"/>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <h5 class="pull-left">Increase Width:</h5>
+                      </td>
+                      <td>
+                        <img class="gesture" src="img/gesture/arrow-right.png"/>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <h5 class="pull-left">Decrease Width:</h5>
+                      </td>
+                      <td>
+                        <img class="gesture" src="img/gesture/arrow-left.png"/>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <h5 class="pull-left">Increase Height:</h5>
+                      </td>
+                      <td>
+                        <img class="gesture" src="img/gesture/arrow-up.png"/>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <h5 class="pull-left">Decrease Height:</h5>
+                      </td>
+                      <td>
+                        <img class="gesture" src="img/gesture/arrow-down.png"/>
+                      </td>
+                    </tr>
+                  </table>
+                </div><!-- /.col-md-6 -->
+              </div><!-- /.row -->
+            </div><!-- /table container -->
+          </div><!-- /.modal-body -->
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    
+    
+    
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
 
-  <script src="js/vendor/bootstrap.min.js"></script>
-  <script src="js/vendor/pdollar.js"></script>
-  <script src="js/main.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/vendor/pdollar.js"></script>
+    <script src="js/main.js"></script>
 
   <!--
   <script>
