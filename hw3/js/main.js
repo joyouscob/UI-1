@@ -1,7 +1,10 @@
 $(function () {
 
 	$('#myModal').modal('toggle');
-		
+	$(document).keypress("h",function() {
+		$('#myModal').modal('toggle');
+	});
+	
 	var _isDown, _points, _strokeID, _r, _g, _rc, _v; // global variables
 
 	_points = new Array(); // point array for current stroke
@@ -201,12 +204,12 @@ $(function () {
 	{
 		var name = result.Name;
 		switch (name) {
-			case "triangle":
-			play();
-			break;
-			case "bars":
-			pause();
-			break;
+			// case "triangle":
+			// play();
+			// break;
+			// case "bars":
+			// pause();
+			// break;
 			case "angle-left":
 			rw();
 			break;
@@ -232,16 +235,16 @@ $(function () {
 			toggle();
 			break;
 			case "arrow-up":
-			tall();
+			help();
 			break;
-			case "arrow-down":
-			short();
-			break;
+			// case "arrow-down":
+			// short();
+			// break;
 			case "arrow-left":
-			thin();
+			small();
 			break;
 			case "arrow-right":
-			wide();
+			big();
 			break;
 		};
 	}
@@ -286,23 +289,20 @@ $(function () {
 	{
 		(_v.muted == true) ? _v.muted=false : _v.muted=true;
 	}
-	function wide() 
+	function big() 
 	{
-		// _v.style.width=50px;
+		// var newWidth = $('video').width() + 25;
+		$('video').css("width", $('video').width()+25+'px');
 	}
-	function thin() 
+	function small() 
 	{
-		// _v.width-=50px;
+		$('video').css("width", $('video').width()-25+'px');
 	}
-	function tall() 
+	function help() 
 	{
-		// _v.videoHeight=500;
+		$('#myModal').modal('toggle');
 	}
-	function short() 
-	{
-		// _v.height-=50px;
-	}
-	
+
 	
 	
 	
