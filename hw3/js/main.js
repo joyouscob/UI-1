@@ -1,5 +1,7 @@
 $(function () {
 
+	$('#myModal').modal('toggle');
+		
 	var _isDown, _points, _strokeID, _r, _g, _rc, _v; // global variables
 
 	_points = new Array(); // point array for current stroke
@@ -12,8 +14,8 @@ $(function () {
 	_g.lineWidth = 3;
 	_g.font = "1em Gentilis";
 	_rc = getCanvasRect(canvas); // canvas rect on page
-	_g.fillStyle = "rgb(255,255,136)";
-	_g.fillRect(0, 0, _rc.width, 20);
+	// _g.fillStyle = "rgb(255,255,136)";
+	// _g.fillRect(0, 0, _rc.width, 20);
 
 	_isDown = false;
 	
@@ -82,7 +84,7 @@ $(function () {
 				_g.clearRect(0, 0, _rc.width, _rc.height);
 			}
 			_points[_points.length] = new Point(x, y, ++_strokeID);
-			drawText("Recording stroke #" + _strokeID + "...");
+			// drawText("Recording stroke #" + _strokeID + "...");
 			var clr = "rgb(" + rand(0,200) + "," + rand(0,200) + "," + rand(0,200) + ")";
 			_g.strokeStyle = clr;
 			_g.fillStyle = clr;
@@ -90,7 +92,7 @@ $(function () {
 		}
 		else if (button == 2)
 		{
-			drawText("Recognizing gesture...");
+			// drawText("Recognizing gesture...");
 		}
 	}
 	function mouseMoveEvent(x, y, button)
@@ -112,7 +114,7 @@ $(function () {
 			if (_isDown)
 			{
 				_isDown = false;
-				drawText("Stroke #" + _strokeID + " recorded.");
+				// drawText("Stroke #" + _strokeID + " recorded.");
 			}
 		}
 		else if (button == 2) // segmentation with right-click
@@ -120,12 +122,12 @@ $(function () {
 			if (_points.length >= 10)
 			{
 				var result = _r.Recognize(_points);
-				drawText("Result: " + result.Name + " (" + round(result.Score,2) + ").");
+				// drawText("Result: " + result.Name + " (" + round(result.Score,2) + ").");
 				control(result);
 			}
 			else
 			{
-				drawText("Too little input made. Please try again.");
+				// drawText("Too little input made. Please try again.");
 			}
 			_strokeID = 0; // signal to begin new gesture on next mouse-down
 		}
@@ -164,7 +166,7 @@ $(function () {
 			var pointclouds = document.getElementById('pointclouds');
 			var name = pointclouds[pointclouds.selectedIndex].value;
 			var num = _r.AddGesture(name, _points);
-			drawText("\"" + name + "\" added. Number of \"" + name + "\"s defined: " + num + ".");
+			// drawText("\"" + name + "\" added. Number of \"" + name + "\"s defined: " + num + ".");
 			_strokeID = 0; // signal to begin new gesture on next mouse-down
 		}
 	}
@@ -174,7 +176,7 @@ $(function () {
 		if (_points.length >= 10 && name.length > 0)
 		{
 			var num = _r.AddGesture(name, _points);
-			drawText("\"" + name + "\" added. Number of \"" + name + "\"s defined: " + num + ".");
+			// drawText("\"" + name + "\" added. Number of \"" + name + "\"s defined: " + num + ".");
 			_strokeID = 0; // signal to begin new gesture on next mouse-down
 		}
 	}
@@ -193,7 +195,7 @@ $(function () {
 		_points.length = 0;
 		_strokeID = 0;
 		_g.clearRect(0, 0, _rc.width, _rc.height);
-		drawText("Canvas cleared.");
+		// drawText("Canvas cleared.");
 	}
 	function control(result)
 	{
