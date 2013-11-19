@@ -12,7 +12,7 @@
 }
 
 video {
-	width:400px;
+	width:50%;
 }
 
 canvas {
@@ -26,4 +26,10 @@ canvas {
 
 .modal-dialog {
 	width:80%;
+}
+
+#howto-screen {
+	width:50%;
+	margin:0 25%;
+	padding:auto;
 }
