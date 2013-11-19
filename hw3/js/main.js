@@ -91,7 +91,7 @@ $(function () {
 			var clr = "rgb(" + rand(0,200) + "," + rand(0,200) + "," + rand(0,200) + ")";
 			_g.strokeStyle = clr;
 			_g.fillStyle = clr;
-			_g.fillRect(x - 4, y - 3, 9, 9);
+			// _g.fillRect(x - 4, y - 3, 9, 9);
 		}
 		else if (button == 2)
 		{
@@ -105,7 +105,7 @@ $(function () {
 			x -= _rc.x;
 			y -= _rc.y - getScrollY();
 			_points[_points.length] = new Point(x, y, _strokeID); // append
-			drawConnectedPoint(_points.length - 2, _points.length - 1);
+			// drawConnectedPoint(_points.length - 2, _points.length - 1);
 		}
 	}
 	function mouseUpEvent(x, y, button)
