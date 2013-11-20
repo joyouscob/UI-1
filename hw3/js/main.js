@@ -125,7 +125,7 @@ $(function () {
 			if (_points.length >= 10)
 			{
 				var result = _r.Recognize(_points);
-				// drawText("Result: " + result.Name + " (" + round(result.Score,2) + ").");
+				drawText(result.Name);
 				control(result);
 			}
 			else
@@ -145,10 +145,47 @@ $(function () {
 	}
 	function drawText(str)
 	{
-		_g.fillStyle = "rgb(255,255,136)";
-		_g.fillRect(0, 0, _rc.width, 20);
-		_g.fillStyle = "rgb(0,0,255)";
-		_g.fillText(str, 1, 10);
+		switch (str) {
+			case "bolt":
+			str = "Play/Pause";
+			break;
+			case "circle":
+			str = "Mute";
+			break;
+			case "plus":
+			str = "Increase Volume";
+			break;
+			case "minus":
+			str = "Decrease Volume";
+			break;
+			case "arrow-up":
+			str = "Help";
+			break;
+			case "arrow-right":
+			str = "Increase Size";
+			break;
+			case "arrow-left":
+			str = "Decrease Size";
+			break;
+			case "angle-right":
+			str = "Jump Ahead";
+			break;
+			case "angle-left":
+			str = "Jump Back";
+			break;
+			case "angles-right":
+			str = "Speed Up";
+			break;
+			case "angles-left":
+			str = "Slow Down";
+			break;
+		};
+		
+		$('#pop').attr("data-content", str);
+		$('#pop').popover('show');
+		setTimeout(function() {
+			$('#pop').popover('hide');
+		},2000);
 	}
 	function rand(low, high)
 	{
