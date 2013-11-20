@@ -27,25 +27,28 @@
   <![endif]-->
 
   <!-- Logo -->
-  <div class="container well">
+  <div class="well header">
     <img src="img/logo/logo_fly.png" class="pull-left">
-    <img src="img/logo/logo_name.png" class="pull-right">
-  </div>  
+    <img src="img/logo/logo_name.png" id="pop" class="pull-right" data-toggle="popover" data-placement="bottom" data-original-title="Recognized:">
+  </div>
   <div class="container">
     <!-- Video -->
-    <div class="container text-center">
+    <div class="container text-center" id="vidtainer">
       <video id="video" src="img/mechanical_principles-1930.mp4"/>
     </div>
     <!-- Canvas -->
     <canvas id="myCanvas" width="420" height="400" oncontextmenu="return false;">
       <span style="background-color:#ffff88;">The &lt;canvas&gt; element is not supported by this browser.</span>
     </canvas>
-    <!-- Footer -->
+    
+  </div> <!-- /container -->  
+  <!-- Footer -->
+  <div class="container footer">
     <hr>
     <footer>
       <p class="text-muted text-center credit">&copy; 2013 William Falk-Wallace | <a href="readme.html">README</a></p>
     </footer>
-  </div> <!-- /container -->  
+  </div>
   
   <!-- Modal -->
   <div class="modal fade" id="myModal" data-keyboard="true" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
