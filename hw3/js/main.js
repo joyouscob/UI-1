@@ -5,6 +5,10 @@ $(function () {
 		$('#myModal').modal('toggle');
 	});
 	
+	$('#helpbutton').click(function() {
+		$('#myModal').modal('toggle');
+	});
+	
 	// var _h = $(window).height();
 	// var _w = $(window).width();
 	// $('video').css("width", $('video').width()+25+'px');
