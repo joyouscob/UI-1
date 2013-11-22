@@ -13,6 +13,27 @@ body {
 	width: 2em;
 }
 
+#helpbutton {
+	color: #999999;
+}
+
+
+#helpbutton:hover {
+	color: #428bca;
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+a {
+	color: #999999;
+}
+
+
+a:hover {
+	color: #428bca;
+	cursor: pointer;
+}
+
 .header {
 	min-height: 20px;
 	padding: 19px;
