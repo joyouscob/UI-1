@@ -32,7 +32,7 @@ My Gestural Video Player utilizes the following templates:
 | Increase Size | ![image](img/gesture/small/arrow-right.png) | H/W |
 | Decrease Size | ![image](img/gesture/small/arrow-left.png) | E/I |
 
-
+![image](img/dev/small/0_gesture-prototyping.jpg)
 
 
 - placement of instructions
