@@ -5,6 +5,11 @@ $(function () {
 		$('#myModal').modal('toggle');
 	});
 	
+	// var _h = $(window).height();
+	// var _w = $(window).width();
+	// $('video').css("width", $('video').width()+25+'px');
+
+	
 	var _isDown, _points, _strokeID, _r, _g, _rc, _v; // global variables
 
 	_points = new Array(); // point array for current stroke
